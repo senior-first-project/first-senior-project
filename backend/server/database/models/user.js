@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize =require('../model/index')
+const sequelize =require('../index')
 const User = (sequelize)=>{
 return sequelize.define('user', {
   username: {

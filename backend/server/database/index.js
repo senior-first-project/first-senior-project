@@ -1,12 +1,14 @@
 const { Sequelize, DataTypes } = require("sequelize");
+const User =require('./models/user')
 const connection = new Sequelize('ecommerceSenior',"root", "root",{
-
-
   host: "localhost",
   dialect: "mysql",
 });
- const user =require('./model')
-user(connection)
+
+const user = User(connection)
+const db = {
+  user
+};
 async function testconnection() {
   try {
     await connection.authenticate();
@@ -16,7 +18,6 @@ async function testconnection() {
   }
 }
 testconnection();
-const db = {};
 
 const initApp = async () => {
   console.log("Testing the database connection..");
@@ -33,3 +34,4 @@ const initApp = async () => {
 };
 
 initApp()
+module.exports= db

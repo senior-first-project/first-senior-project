@@ -1,5 +1,5 @@
 const express = require("express");
-require("./model/index")
+require("./database/index")
 const route = require('./route/route')
 
 

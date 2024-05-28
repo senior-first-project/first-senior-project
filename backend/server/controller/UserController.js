@@ -1,8 +1,8 @@
-const { log } = require('console');
-const User = require('../model/model');
+
+const {user} = require('../database/index');
 
 function getAllUsers(req, res) {
-  User.findAll()
+  user.findAll()
     .then(users => res.json(users))
     .catch(error => {
       console.error('Error fetching users:', error);
@@ -12,7 +12,7 @@ function getAllUsers(req, res) {
 
 function createUser(req, res) { console.log("HELLO");
   const { username, email, password } = req.body;
-  User.create({ username, email, password })
+  user.create({ username, email, password })
     .then(newUser => res.status(201).json(newUser))
     .catch(error => {
       console.error('Error creating user:', error);
@@ -24,7 +24,7 @@ function updateUser(req, res) {
   const { id } = req.params;
   const { username, email, password } = req.body;
   
-  User.update({ username, email, password }, { where: { id } })
+  user.update({ username, email, password }, { where: { id } })
     .then(updated => {
       if (updated[0] === 0) {
         return res.status(404).json({ message: 'User not found' });
@@ -40,7 +40,7 @@ function updateUser(req, res) {
 function deleteUser(req, res) {
   const { id } = req.params;
   
-  User.destroy({ where: { id } })
+  user.destroy({ where: { id } })
     .then(deleted => {
       if (!deleted) {
         return res.status(404).json({ message: 'User not found' });
