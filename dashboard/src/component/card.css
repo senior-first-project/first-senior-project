@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.mainContainer{
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 100%;
+    min-width: 100vh;
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    align-items: center;
+    padding: 0 10rem;
+
+}
+.card{
+      width: 100%;
+}
+.mainContainer .box{
+   
+    margin: bottom 7px; ;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+.mainContainer .box:hover{
+    box-shadow: rgba(17,12,46,0.15)0px 48px;
+    transform: scale(1.1);
+}
+.mainContainer.card{
+    padding:20px 20px 0 ;
+}
+.card .image{
+    width: 80%;
+background: #bbb7b7;
+margin: 10px auto 25px;
+}
+.card .image::before{
+content: "";
+    width: 10px;
+height: 10px;
+bottom: 7px;
+position: absolute;
+left: 10px;
+border-radius: 50%;
+
+}
+.card .image img{
+width: 180px;
+transition: .3s ease-in-out;
+}
+.card .image:hover img{
+        transform: scale(1,1);
+}
+.card .desc{
+    width: 70%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+}
+.card .desc h1{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+.card . desc p{
+    font-size: 14px;
+    margin :10px 0 20px
+
+}
+.card span{
+    font-size: 20px ;
+}
+.btn{
+    width: 100%;
+    padding: 12px 20px;
+margin-top: 15px;
+border:none ;
+outline: none;
+color: #fff;
+font-weight: 600;
+text-transform: uppercase
+;
+cursor: pointer;
+}
