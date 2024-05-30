@@ -13,7 +13,13 @@ return sequelize.define('user', {
   password: {
     type: DataTypes.TEXT,
     allowNull: false
+  },
+  role:{
+    type: DataTypes.ENUM("admin","user","client"),
+    allowNull:false,
+    defaultValue: "client"
   }
+
 });
 }
 module.exports = User
