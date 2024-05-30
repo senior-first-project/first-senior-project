@@ -6,13 +6,9 @@ import SignUp from './componenet/SignUp';
 function App() {
 
   return (
-    <BrowserRouter>
-    <Routes>
-    <Route path="SignIn" element={<SignIn />} />
-          <Route path="SignUp" element={<SignUp />} />
-    </Routes>
-    
-    </BrowserRouter>
+    <div>
+      
+    </div>
   )
 }
 

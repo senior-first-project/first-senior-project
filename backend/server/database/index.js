@@ -1,13 +1,16 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const User =require('./models/UserModel')
+const Prod= require('./models/productModel')
 const connection = new Sequelize('ecommerceSenior',"root", "root",{
   host: "localhost",
   dialect: "mysql",
 });
 
 const user = User(connection)
+const prod = Prod(connection)
 const db = {
-  user
+  user,prod
+
 };
 async function testconnection() {
   try {
