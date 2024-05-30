@@ -1,11 +1,11 @@
 .nav { 
   background-color: #9bc3db;
-  /* margin-left: 0.5px; */
+  margin-left: 0.5;
+margin-bottom: 100%;
   padding: 5px;
   display: flex;
-  position: relative;
-  margin-right: 10px;
-  justify-content: space-around;
+  position: relative";
+   justify-content: space-around;
   align-items: center;
   color: #000000;
   margin-right: 2px
@@ -68,7 +68,7 @@
   background-color: rgba(128, 122, 122, 0);
   cursor: pointer;
 } 
- /* .menu-item{
+  .menu-item{
   font-size: 22px;
   border-bottom: 1px solid rgb(29, 128, 128);
   font-size: bolder;
@@ -128,12 +128,12 @@
   padding: 0.5rem 1rem;
   margin-right: 1rem;
   cursor: pointer;
-} */
+} 
 
  .product-card-buttons button:hover {
   background-color: rgb(86, 5, 5);
   color :white
-}  */
+}  
  .products-list {
     display: flex;
     flex-direction: row;
