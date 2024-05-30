@@ -1,19 +1,14 @@
-import { useEffect, useState } from 'react'
-import { BrowserRouter,Route,Routes ,Router} from 'react-router-dom'
-import Category from './component/category'
-import './App.css'
+// import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SignIn from './componenet/SignIn';
+import SignUp from './componenet/SignUp';
+
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
-    <>
-     
-
-      <Category/>
+    <div>
       
-  
-    
-    </>
+    </div>
   )
 }
 

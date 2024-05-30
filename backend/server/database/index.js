@@ -22,19 +22,19 @@ async function testconnection() {
 }
 testconnection();
 
-const initApp = async () => {
-  console.log("Testing the database connection..");
+// const initApp = async () => {
+//   console.log("Testing the database connection..");
 
-  try {
-      await connection.sync()
-      console.log("database create");
+//   try {
+//       await connection.sync( {force:true})
+//       console.log("database create");
 
  
  
-  } catch (error) {
-      console.log( error);
-  }
-};
+//   } catch (error) {
+//       console.log( error);
+//   }
+// };
 
-initApp()
+// initApp()
 module.exports= db
