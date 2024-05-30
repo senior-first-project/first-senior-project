@@ -1,4 +1,3 @@
-
 const {user} = require('../database/index');
 
 function getAllUsers(req, res) {

@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require("sequelize");
-const User =require('./models/user')
+const User =require('./models/UserModel')
 const connection = new Sequelize('ecommerceSenior',"root", "root",{
   host: "localhost",
   dialect: "mysql",
@@ -24,7 +24,7 @@ const initApp = async () => {
 
   try {
       await connection.sync()
-      console.log("database create");
+      console.log("database created!!!");
 
  
  
@@ -32,6 +32,7 @@ const initApp = async () => {
       console.log( error);
   }
 };
+// connection.sync({ force: true });
 
 initApp()
 module.exports= db
