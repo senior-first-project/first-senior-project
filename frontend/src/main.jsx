@@ -1,44 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import axios from 'axios';
-import Cart from './Cart.jsx';
-import App from './App.jsx'; // Assuming App.jsx contains the component for the main app logic
-import About from "./About.jsx"
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
 
-function MainApp() {
-  const [one, setOne] = useState({});
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (obj) => {
-    axios
-      .post('http://localhost:4000/api/cart/post', obj)
-      .then(() => alert('Added to cart'))
-      .catch((e) => console.log(e));
-  };
-
-  const fetchCart = () => {
-    return axios('http://localhost:4000/api/cart/get');
-  };
-
-  const deleteCart = (id) => {
-    axios
-      .delete(`http://localhost:4000/api/cart/${id}`)
-      .then(() => console.log('Deleted from cart'))
-      .catch((e) => console.log(e));
-  };
-
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<App one={one} setOne={setOne} />} />
-        <Route path="/cart" element={<Cart deleteCart={deleteCart} fetchCart={fetchCart} />} />
-        <Route path="/About" element={<About  />} />
-
-      </Routes>
-    </Router>
-  );
-}
-
-const rootElement = document.getElementById('root');
-ReactDOM.render(<MainApp />, rootElement);
+import './index.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Category from './component/category'
+import Camera from './component/Camera.jsx'
+import Computers from './component/Computers.jsx'
+import Gaming from './component/Gaming.jsx'
+import Headphones from './component/Headphones.jsx'
+import Phones from './component/Phones.jsx'
+import Smartwatch from './component/SmartWatch.jsx'
+ import SignIn from './componenet/SignIn.jsx'
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+  <BrowserRouter>
+   <Routes>
+        <Route path="/" element={<App />} />  
+      <Route path="/camera" element={<Camera/>} />
+      <Route path="/signIn" element={<SignIn/>}/>
+      <Route path="/computers" element={<Computers />} />
+      <Route path="/gaming " element={<Gaming  />} />
+      <Route path="/ headphones" element={< Headphones />} />
+      <Route path="/phones" element={<Phones />} />
+      <Route path="/smartwatch" element={<Smartwatch />} /> 
+    </Routes> 
+  </BrowserRouter>
+  </React.StrictMode>,
+)

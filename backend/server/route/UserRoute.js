@@ -1,13 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const { createUser, getAllUsers, updateUser, deleteUser,login }= require('../controller/UserController');
-const {InRole} =require("../roles"); 
-// const { user } = require('../database');
+const userController = require('../controller/UserController');
 
-router.get('/getAll',getAllUsers);
-router.get("/signin/:email/:password",login)
-router.post('/post', createUser);
-router.put('/update/:id', updateUser);
-router.delete('/delet/:id', deleteUser);
+router.get('/getAll', userController.getAllUsers);
+router.post('/post', userController.createUser);
+router.put('/update/:id', userController.updateUser);
+router.delete('/delet/:id', userController.deleteUser);
 
 module.exports = router;
