@@ -1,7 +1,7 @@
 const express = require("express");
 require("./database/index")
 const route = require('./route/route')
-
+const productroute = require('./route/productroute')
 
 
 
@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api', route)
-
+app.use('/apii', productroute)
 app.use(express.static(__dirname + "/../client/dist"));
 
 

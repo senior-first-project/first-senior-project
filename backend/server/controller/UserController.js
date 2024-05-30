@@ -53,4 +53,5 @@ function deleteUser(req, res) {
     });
 }
 
+
 module.exports = { getAllUsers, createUser, updateUser, deleteUser };

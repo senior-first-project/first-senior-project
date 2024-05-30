@@ -1,14 +1,18 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const User =require('./models/user')
-const connection = new Sequelize('ecommerceSenior',"root", "root",{
+const Product =require('./models/product')
+const connection = new Sequelize('ecommercesenior',"root", "Aymen@2003",{
   host: "localhost",
   dialect: "mysql",
 });
 
+const product=Product(connection)
 const user = User(connection)
 const db = {
-  user
+  user,
+  product
 };
+
 async function testconnection() {
   try {
     await connection.authenticate();
@@ -19,19 +23,19 @@ async function testconnection() {
 }
 testconnection();
 
-const initApp = async () => {
-  console.log("Testing the database connection..");
+// const initApp = async () => {
+//   console.log("Testing the database connection..");
 
-  try {
-      await connection.sync()
-      console.log("database create");
+//   try {
+//       await connection.sync()
+//       console.log("database create");
 
  
  
-  } catch (error) {
-      console.log( error);
-  }
-};
+//   } catch (error) {
+//       console.log( error);
+//   }
+// };
 
-initApp()
+// initApp()
 module.exports= db
