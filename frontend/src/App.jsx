@@ -177,10 +177,24 @@ import { CgProfile } from 'react-icons/cg';
 import { CiLogout } from 'react-icons/ci';
 import { RiRedPacketLine } from 'react-icons/ri';
 import { RiShoppingCart2Line } from "react-icons/ri";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SignIn from './componenet/SignIn';
+import SignUp from './componenet/SignUp';
+
 
 
 
 const App = () => {
+  <BrowserRouter>
+  <Routes>
+  <Route path="SignIn" element={<SignIn />} />
+        <Route path="SignUp" element={<SignUp />} />
+  </Routes>
+  
+  </BrowserRouter>
+
+
+
   const [menuView, setMenuView] = useState(false);
   const [view, setView] = useState('');
   const [data, setData] = useState([]);
