@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Search from './Search';
+import Search from './componentssFayrouz/Search';
 import axios from 'axios';
-import Cart from './Cart';
-import Footer from './Footer';
+import Cart from './componentssFayrouz/Cart';
+import Footer from './componentssFayrouz/Footer';
 import './App.css';
 import { VscHeart } from 'react-icons/vsc';
 import { CgProfile } from 'react-icons/cg';
