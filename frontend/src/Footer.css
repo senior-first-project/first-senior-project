@@ -1,30 +1,31 @@
 .footer {
-    background-color: #000;
+    background-color: #282727;
     color: #fff;
-    padding: 20px 0;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
+    padding: 10px 150px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1  rem;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .footer-section {
-    flex: 1 1 200px;
-    margin: 0 20px;
+    flex: 1 1 70px;
+    margin: 0 120px;
 }
 
 .footer-section h3 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    justify-content: space-evenly;
 }
 
 .footer-section p,
 .footer-section address {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .footer-section ul {
@@ -33,7 +34,7 @@
 }
 
 .footer-section li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .subscribe-form {
@@ -41,48 +42,50 @@
 }
 
 .subscribe-input {
-    flex: 1;
-    padding: 5px;
-    font-size: 1rem;
+    flex: 5;
+    padding: 1px;
+    font-size: 20px;
 }
 
 .subscribe-button {
     background: none;
     border: none;
-    color: #fff;
-    font-size: 1.5rem;
+    color: #111111;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 
 .app-links img {
-    width: 150px;
-    margin: 5px 0;
+    width: 200px;
+    margin: 90px 0;
 }
 
 .social-icons {
     display: flex;
+    width:10px;
+    margin:10px;
 }
 
 .social-icons a {
     color: #fff;
     text-decoration: none;
-    margin-right: 15px;
-    font-size: 1.5rem;
+    margin-right: 35px;
+    font-size:1.5rem;
     transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ccc;
+    color: #7c1c1c;
 }
 
 .footer-bottom {
     background-color: #222;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .footer-bottom p {
-    margin: 0;
-    font-size: 1rem;
+    /* margin: 0; */
+    font-size: 0.7rem;
     color: #ffffff;
 }

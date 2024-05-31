@@ -9,6 +9,98 @@ import Footer from './Footer';
 
 function About() {
     const styles = `
+    .footer {
+        background-color: #282727;
+        color: #fff;
+        padding: 35px 10;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1rem;
+    }
+    
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .footer-section {
+        flex: 1 1 10px;
+        margin: 0 120px;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-section p,
+    .footer-section address {
+        font-size: 1.0rem;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-section li {
+        margin-bottom: 10px;
+    }
+    
+    .subscribe-form {
+        display: flex;
+    }
+    
+    .subscribe-input {
+        flex: 1;
+        padding: 0px;
+        font-size: 20px;
+    }
+    
+    .subscribe-button {
+        background: none;
+        border: none;
+        color: #111111;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    
+    .app-links img {
+        width: 200px;
+        margin: 50px 0;
+    }
+    
+    .social-icons {
+        display: flex;
+    }
+    
+    .social-icons a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 15px;
+        font-size:1.9rem;
+        transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+        color: #c0b9b9;
+    }
+    
+    .footer-bottom {
+        background-color: #222;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #ffffff;
+    }
+    
+    
+////////////////AboutCSS//////////////////////
+
     .about-container {
         display: flex;
         flex-direction: column;
@@ -80,7 +172,7 @@ function About() {
     }
 
     .stat-text p {
-        font-size: 14px;
+        font-size: 100px;
         color: #555;
     }
     `;
@@ -92,7 +184,7 @@ function About() {
                     <div className="about-text">
                         <h2>Our Story</h2>
                         <p>
-                            Launched in 2024, Exclusive is North Africa's premier online shopping marketplace with an active presence in Tunis. Supported by a wide range of tailored marketing, data, and service solutions. Exclusive has 10,500 sellers and 300 brands and serves 3 million customers across the region. Exclusive has more than 1 million products to offer, growing at a very fast pace. Exclusive offers a diverse assortment in categories ranging from consumer electronics to fashion and lifestyle products.
+                            Launched in 2024, Exclusive is North Africa's premier online shopping <br /> marketplace with an active presence in Tunis. Supported <br /> by a wide range of tailored marketing, data, and service solutions. <br /> Exclusive has 10,500 sellers and 300 brands and serves 3 million <br /> customers across the region. <br />    <br />Exclusive has more than 1 million products to offer, growing at a very fast pace. Exclusive offers a diverse assortment in categories ranging from consumer electronics to fashion and lifestyle products.
                         </p>
                     </div>
                     <img className="about-image" src="https://img.freepik.com/premium-photo/portrait-her-she-nice-attractive-cheerful-cheery-girl-carrying-new-clothing-things-spending-holiday-isolated-bright-vivid-shine-vibrant-green-blue-turquoise-color-wall_274222-15637.jpg" alt="About us" />
@@ -124,7 +216,7 @@ function About() {
                     </div>
                 </div>
             </div>
-            <Footer />
+            
             <style>{styles}</style>
         </div>
     );

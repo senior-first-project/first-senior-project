@@ -15,6 +15,9 @@ import SignUp from './componenet/SignUp';
 // import Contact from '../src/Contact';
 import About from '../src/About';
 import Cart from '../src/Cart';
+import Products from './components/Products';
+import SingleProduct from './components/SingleProduct';
+import Footer from './Footer';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -34,6 +37,25 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/cart" element={<Cart />} />
         <Route path="/category" element={<Category />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   </React.StrictMode>
 );
+
+
+
+// <Router>
+// <div>
+//   <Routes>
+//     <Route
+//       path="/"
+//       element={
+//         <Products
+//           data={data}
+//         />
+//       }
+//     />
+//     <Route path="/oneProduct/:id" element={<SingleProduct />} />
+//   </Routes>
+// </div>
+// </Router>
