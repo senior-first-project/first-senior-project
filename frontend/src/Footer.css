@@ -1,7 +1,4 @@
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background-color: #000;
     color: #fff;
     padding: 20px 0;
@@ -25,7 +22,8 @@
     margin-bottom: 15px;
 }
 
-.footer-section p {
+.footer-section p,
+.footer-section address {
     font-size: 1.2rem;
 }
 
@@ -36,6 +34,29 @@
 
 .footer-section li {
     margin-bottom: 8px;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-input {
+    flex: 1;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.subscribe-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.app-links img {
+    width: 150px;
+    margin: 5px 0;
 }
 
 .social-icons {
@@ -51,18 +72,7 @@
 }
 
 .social-icons a:hover {
-    color: #ffffff;
-}
-
-.social-links {
-    margin-top: 10px;
-}
-
-.social-links a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-    font-size: 1.2rem;
+    color: #ccc;
 }
 
 .footer-bottom {
@@ -74,5 +84,5 @@
 .footer-bottom p {
     margin: 0;
     font-size: 1rem;
-    color: #fff;
+    color: #ffffff;
 }

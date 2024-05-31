@@ -1,49 +1,66 @@
 import React from 'react';
-import './Footer.css';
-import { FaFacebook } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
-import { LuInstagram } from "react-icons/lu";
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import './Footer.css'; // Import the CSS file
+import { IoIosAppstore } from "react-icons/io";
+import { PiGooglePlayLogo } from "react-icons/pi";
 
 function Footer() {
     return (
         <footer className="footer">
             <div className="footer-container">
                 <div className="footer-section">
-                    <h3>About Us</h3>
-                    <p>Learn more about our company, mission, and values.</p>
+                    <h3>Exclusive</h3>
+                    <p>Subscribe</p>
+                    <p>Get 10% off your first order</p>
+                    <form className="subscribe-form">
+                        <input type="email" placeholder="Enter your email" className="subscribe-input" />
+                        <button type="submit" className="subscribe-button">➔</button>
+                    </form>
                 </div>
                 <div className="footer-section">
-                    <h3>Customer Service</h3>
+                    <h3>Support</h3>
+                    <address>
+                        <br />
+                        DH 1515, Tunis.<br />
+                        Exclusive@gmail.com<br />
+                        +2165252889
+                    </address>
+                </div>
+                <div className="footer-section">
+                    <h3>Account</h3>
                     <ul>
-                        <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="/faq">FAQ</a></li>
-                        <li><a href="/returns">Returns</a></li>
-                        <li><a href="/shipping">Shipping</a></li>
+                        <li><Link to="/login">Login / Register</Link></li>
+                        <li><Link to="/cart">Cart</Link></li>
+                        <li><Link to="/wishlist">Wishlist</Link></li>
+                        <li><Link to="/shop">Home</Link></li>
                     </ul>
                 </div>
                 <div className="footer-section">
-                    <h3>Follow Us</h3>
-                    <div className="social-icons">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-                    </div>
-                    <div className="social-links">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><LuInstagram /></a>
-                    </div>
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+                        <li><Link to="/terms-of-use">Terms of Use</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                    </ul>
                 </div>
                 <div className="footer-section">
-                    <h3>Subscribe to our newsletter</h3>
-                    <form className="subscribe-form">
-                        <input type="email" placeholder="Enter your email" className="subscribe-input" />
-                        <button type="submit" className="subscribe-button">Subscribe</button>
-                    </form>
+                    <h3>Download App</h3>
+                    <p>Save $3 with App New User Only</p>
+                    <div className="app-links">
+                    <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer"><IoIosAppstore /></a>
+                    <a href="https://play.google.com/store/games?hl=en" target="_blank" rel="noopener noreferrer"><PiGooglePlayLogo /></a>
+
+                    </div>
+                    <div className="social-icons">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                    </div>
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+                <p>&copy; Copyright Rimel 2022. All rights reserved.</p>
             </div>
         </footer>
     );
